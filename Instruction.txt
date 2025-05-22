@@ -1,0 +1,3 @@
+# For Expriment 4 to Expriment 10
+
+**.nam ** and **.tr** files are not uploaded, it will be generated after executing the **.awk** and **.tcl** files.

@@ -1,0 +1,30 @@
+Simulation Scenario:
+
+In this simulation we want to see how the Distance vector and Link state protocols behave in the presence of link or node failures. We will use the network model that we just described.
+----------------------------------------------------------------------------------------------------------------------------------------------
+The Events of the scenario are:
+
+In time 0 the simulation will start
+The FTP and CBR will start in time 0.5 with source node0 and destination node4
+At time 1.0 the link between node4 and node5 will fail and will be restored at time 3.0
+At time 3.8 node6 will fail and will recover at time 4.5
+At time 5.0 the simulation will end
+You will test the above scenario for three different routing protocols: Static, Distance Vector and Link State. In other words you will have to run the above scenario 3 times, one for each routing protocol
+----------------------------------------------------------------------------------------------------------------------------------------------
+Some new commands that will be used in the simulation:
+
+Set a Routing Protocol: 
+$ns rtproto name_of_routing_protocol (DV for distance vector and LS for Link State)
+
+Note: For Static routes do not use this command.
+----------------------------------------------------------------------------------------------------------------------------------------------
+Simulate Node Failure/Restoration: 
+$ns rtmodel-at [time] [down/up] [node_id]
+
+Examples:
+$ns rtmodel-at 10.2 down $n16 #Node failure
+$ns rtmodel-at 43.5 up $n16 #Node restoration
+----------------------------------------------------------------------------------------------------------------------------------------------
+Simulate Link Failure/Restoration: 
+$ns rtmodel-at [time] [down/up] [node_id_from node_id_to]
+----------------------------------------------------------------------------------------------------------------------------------------------
